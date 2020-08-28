@@ -1,0 +1,31 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">  
+<head>
+<title>Parag Library Inventory</title>
+</head>
+<body>
+	<form action="books" method="post">
+		<table>
+			<tr>
+				<td><label for="bookid">Book Id</label></td>
+				<td><input type="number" name="bookid"></input></td>
+			</tr>
+			<tr>
+				<td><label for="book-name">Book Name</label></td>
+				<td><input type="text" name="bookname"></input></td>
+			</tr>
+			<tr>
+				<td><label for="author">Author</label></td>
+				<td><input type="text" name="author"></input></td>
+			</tr>
+			<tr>
+				<td><label for="price">Price</label></td>
+				<td><input type="number" name="price"></input></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></input></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

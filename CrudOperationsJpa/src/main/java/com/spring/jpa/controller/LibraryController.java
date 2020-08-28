@@ -26,6 +26,12 @@ public class LibraryController {
 		return service.getAllBooks();
 	}
 
+	@PostMapping("/books")
+	private int saveBook(@RequestBody Books books) {
+		service.saveOrUpdate(books);
+		return books.getBookid();
+	}
+
 	@GetMapping("/book/{bookid}")
 	private Books getBooks(@PathVariable("bookid") int bookid) {
 		return service.getBooksById(bookid);
@@ -37,10 +43,5 @@ public class LibraryController {
 		service.delete(bookid);
 	}
 
-	@PostMapping("/books")
-	private int saveBook(@RequestBody Books books) {
-		service.saveOrUpdate(books);
-		return books.getBookid();
-	}
 
 }
